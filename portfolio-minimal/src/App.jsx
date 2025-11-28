@@ -7,10 +7,12 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   return (
     <div className="bg-dark min-h-screen text-white selection:bg-accent selection:text-white cursor-none">
+      <ScrollProgress />
       <CustomCursor />
       <Navbar />
       <Hero />

@@ -1,10 +1,17 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
         <footer className="py-8 bg-dark border-t border-white/5">
-            <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+            >
                 <div className="mb-4 md:mb-0">
                     <p className="text-slate-500 text-sm">
                         © {new Date().getFullYear()} Abhishek. All rights reserved.
@@ -22,7 +29,7 @@ const Footer = () => {
                         <Mail size={20} />
                     </a>
                 </div>
-            </div>
+            </motion.div>
         </footer>
     );
 };
